@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.btnMasterData = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
@@ -43,6 +44,7 @@
             // pnlSideMenu
             // 
             this.pnlSideMenu.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlSideMenu.Controls.Add(this.btnSettings);
             this.pnlSideMenu.Controls.Add(this.btnAddEmp);
             this.pnlSideMenu.Controls.Add(this.btnMasterData);
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -50,6 +52,21 @@
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(220, 356);
             this.pnlSideMenu.TabIndex = 0;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSettings.Location = new System.Drawing.Point(-3, 110);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(220, 49);
+            this.btnSettings.TabIndex = 2;
+            this.btnSettings.Text = "SETTINGS";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnAddEmp
             // 
@@ -180,6 +197,7 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.Button btnMasterData;
         private System.Windows.Forms.Panel pnlStage;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 

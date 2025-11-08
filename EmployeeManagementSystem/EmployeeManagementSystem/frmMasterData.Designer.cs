@@ -53,7 +53,7 @@
             // 
             this.lblMasterData.AutoSize = true;
             this.lblMasterData.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMasterData.ForeColor = System.Drawing.Color.White;
+            this.lblMasterData.ForeColor = System.Drawing.Color.Black;
             this.lblMasterData.Location = new System.Drawing.Point(12, 19);
             this.lblMasterData.Name = "lblMasterData";
             this.lblMasterData.Size = new System.Drawing.Size(133, 23);
@@ -89,7 +89,7 @@
             // 
             this.lblTransactionNo.AutoSize = true;
             this.lblTransactionNo.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTransactionNo.ForeColor = System.Drawing.Color.Black;
             this.lblTransactionNo.Location = new System.Drawing.Point(3, 31);
             this.lblTransactionNo.Name = "lblTransactionNo";
             this.lblTransactionNo.Size = new System.Drawing.Size(231, 19);

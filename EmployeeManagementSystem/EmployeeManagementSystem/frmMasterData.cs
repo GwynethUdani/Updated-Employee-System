@@ -91,6 +91,12 @@ namespace EmployeeManagementSystem
 
         }
 
-        
+        public void RefreshData()
+        {
+            string select_tblrequestorlist = "SELECT * FROM tbl_EmployeeData ORDER BY EmployeeNumber DESC";
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+        }
+
+
     }
 }

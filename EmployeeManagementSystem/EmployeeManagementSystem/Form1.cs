@@ -43,12 +43,18 @@ namespace EmployeeManagementSystem
             }
         }
 
+
         private void frmMotherForm_Load(object sender, EventArgs e)
         {
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmSettings());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -91,5 +97,7 @@ namespace EmployeeManagementSystem
             childForm.BringToFront();
             childForm.Show();
         }
+
+ 
     }
 }
