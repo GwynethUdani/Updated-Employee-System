@@ -58,12 +58,12 @@ namespace EmployeeManagementSystem.CRUD
         public static bool RETRIEVEDTG(DataGridView DTG, string SQL)
         {
             con.Open();
-            cmd = new OleDbCommand();
-            {
-                var withBlock = cmd;
-                withBlock.Connection = con;
-                withBlock.CommandText = SQL;
-            }
+                cmd = new OleDbCommand();
+            { 
+                    var withBlock = cmd;
+                    withBlock.Connection = con;
+                    withBlock.CommandText = SQL;
+               }
             da = new OleDbDataAdapter();
             da.SelectCommand = cmd;
             dt = new DataTable();
@@ -72,51 +72,49 @@ namespace EmployeeManagementSystem.CRUD
                 var withBlock = DTG;
                 withBlock.DataSource = dt;
             }
-            if (dt.Rows.Count > 0)
-            {
+        if (dt.Rows.Count > 0)
+        {
                 con.Close();
                 return true;
 
-            }
-            else
-            {
+        }
+        else
+        {
                 con.Close();
                 return false;
-            }
+        }
         }
 
 
-        public static bool RETRIEVECBO(ComboBox cbo, string SQL, string displayMember, string valueMember)
-        {
-            con.Open();
-            cmd = new OleDbCommand();
-            {
-                var withBlock = cmd;
-                withBlock.Connection = con;
-                withBlock.CommandText = SQL;
-            }
+        //public static bool RETRIEVECBO(ComboBox cbo, string SQL, string displayMember, string valueMember)
+        //{
+        //    con.Open();
+        //    cmd = new OleDbCommand();
+        //    {
+        //        var withBlock = cmd;
+        //        withBlock.Connection = con;
+        //        withBlock.CommandText = SQL;
+        //    }
 
-            da = new OleDbDataAdapter();
-            da.SelectCommand = cmd;
-            dt = new DataTable();
-            da.Fill(dt);
+        //    da = new OleDbDataAdapter();
+        //    da.SelectCommand = cmd;
+        //    dt = new DataTable();
+        //    da.Fill(dt);
 
-            {
-                var withBlock = cbo;
-                withBlock.DataSource = dt;
-                withBlock.DisplayMember = displayMember; // Column to show in ComboBox
-                withBlock.ValueMember = valueMember;     // Column to use as value
-            }
+        //    {
+        //        var withBlock = cbo;
+        //        withBlock.DataSource = dt;
+        //        withBlock.DisplayMember = displayMember; // Column to show in ComboBox
+        //        withBlock.ValueMember = valueMember;     // Column to use as value
+        //    }
 
-            con.Close();
+        //    con.Close();
 
-            return dt.Rows.Count > 0;
-        }
-
+        //    return dt.Rows.Count > 0;
+        //}
 
         public static bool CUD(string sql)
-        {
-            con.Open();
+        { con.Open();
             {
                 var withBlock = cmd;
                 withBlock.Connection = con;
@@ -134,8 +132,7 @@ namespace EmployeeManagementSystem.CRUD
                 return false;
             }
             con.Close();
-
-
         }
+
     }
 }

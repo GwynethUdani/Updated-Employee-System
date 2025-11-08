@@ -88,7 +88,7 @@
             this.GroupBox.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox.Location = new System.Drawing.Point(0, 66);
             this.GroupBox.Name = "GroupBox";
-            this.GroupBox.Size = new System.Drawing.Size(800, 198);
+            this.GroupBox.Size = new System.Drawing.Size(800, 202);
             this.GroupBox.TabIndex = 1;
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Employee Details Manual Insert and Update";

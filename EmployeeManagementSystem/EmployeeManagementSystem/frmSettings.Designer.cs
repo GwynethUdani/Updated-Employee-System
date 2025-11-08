@@ -41,14 +41,13 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
-            this.cmbSection = new System.Windows.Forms.ComboBox();
+            this.cbSection = new System.Windows.Forms.ComboBox();
             this.lblSection = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.tpageSectionRegistration = new System.Windows.Forms.TabPage();
-            this.btnDownload = new System.Windows.Forms.Button();
             this.TabPage.SuspendLayout();
             this.tpageUserRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -87,13 +86,9 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.Size = new System.Drawing.Size(948, 467);
             this.dgvUsers.TabIndex = 2;
-            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
-            this.dgvUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellDoubleClick);
-            this.dgvUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellDoubleClick_1);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnDownload);
             this.panel1.Controls.Add(this.btnExecute);
             this.panel1.Controls.Add(this.lblNumber);
             this.panel1.Controls.Add(this.lblMatch);
@@ -103,7 +98,7 @@
             this.panel1.Controls.Add(this.txtAge);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblAge);
-            this.panel1.Controls.Add(this.cmbSection);
+            this.panel1.Controls.Add(this.cbSection);
             this.panel1.Controls.Add(this.lblSection);
             this.panel1.Controls.Add(this.txtFullName);
             this.panel1.Controls.Add(this.txtUserName);
@@ -118,32 +113,30 @@
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(109, 364);
+            this.btnExecute.Location = new System.Drawing.Point(107, 408);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(75, 23);
             this.btnExecute.TabIndex = 15;
             this.btnExecute.Text = "Execute";
             this.btnExecute.UseVisualStyleBackColor = true;
-            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(14, 374);
+            this.lblNumber.Location = new System.Drawing.Point(14, 390);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(55, 13);
+            this.lblNumber.Size = new System.Drawing.Size(44, 13);
             this.lblNumber.TabIndex = 14;
-            this.lblNumber.Text = "✓ Number";
+            this.lblNumber.Text = "Number";
             // 
             // lblMatch
             // 
             this.lblMatch.AutoSize = true;
-            this.lblMatch.Location = new System.Drawing.Point(14, 348);
+            this.lblMatch.Location = new System.Drawing.Point(14, 364);
             this.lblMatch.Name = "lblMatch";
-            this.lblMatch.Size = new System.Drawing.Size(48, 13);
+            this.lblMatch.Size = new System.Drawing.Size(37, 13);
             this.lblMatch.TabIndex = 13;
-            this.lblMatch.Text = "✓ Match";
-            this.lblMatch.Click += new System.EventHandler(this.lblMatch_Click);
+            this.lblMatch.Text = "Match";
             // 
             // txtConfirmPassword
             // 
@@ -193,14 +186,13 @@
             this.lblAge.TabIndex = 7;
             this.lblAge.Text = "Age";
             // 
-            // cmbSection
+            // cbSection
             // 
-            this.cmbSection.FormattingEnabled = true;
-            this.cmbSection.Location = new System.Drawing.Point(17, 158);
-            this.cmbSection.Name = "cmbSection";
-            this.cmbSection.Size = new System.Drawing.Size(121, 21);
-            this.cmbSection.TabIndex = 6;
-            this.cmbSection.SelectedIndexChanged += new System.EventHandler(this.cmbSection_SelectedIndexChanged);
+            this.cbSection.FormattingEnabled = true;
+            this.cbSection.Location = new System.Drawing.Point(17, 158);
+            this.cbSection.Name = "cbSection";
+            this.cbSection.Size = new System.Drawing.Size(121, 21);
+            this.cbSection.TabIndex = 6;
             // 
             // lblSection
             // 
@@ -253,16 +245,6 @@
             this.tpageSectionRegistration.Text = "Section Registration";
             this.tpageSectionRegistration.UseVisualStyleBackColor = true;
             // 
-            // btnDownload
-            // 
-            this.btnDownload.Location = new System.Drawing.Point(57, 425);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(75, 23);
-            this.btnDownload.TabIndex = 16;
-            this.btnDownload.Text = "Download";
-            this.btnDownload.UseVisualStyleBackColor = true;
-            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
-            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,7 +253,6 @@
             this.Controls.Add(this.TabPage);
             this.Name = "frmSettings";
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.frmSettings_Load);
             this.TabPage.ResumeLayout(false);
             this.tpageUserRegistration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
@@ -298,12 +279,10 @@
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.ComboBox cmbSection;
+        private System.Windows.Forms.ComboBox cbSection;
         private System.Windows.Forms.Label lblSection;
         private System.Windows.Forms.Button btnExecute;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblMatch;
-        private System.Windows.Forms.TextBox txtNewPassword;
-        private System.Windows.Forms.Button btnDownload;
     }
 }

@@ -65,7 +65,6 @@ namespace EmployeeManagementSystem
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmAddEmployee());
-            setDefaultBtn();
         }
 
         private void pnlTitleBar_Paint(object sender, PaintEventArgs e)
@@ -99,16 +98,6 @@ namespace EmployeeManagementSystem
             childForm.Show();
         }
 
-        public void setDefaultBtn()
-        {
-            frmMasterData.selectedTransaction = "";
-            frmMasterData.RequestorName = "";
-            frmMasterData.Email = "";
-            frmMasterData.Section = "";
-            frmMasterData.LocalNumber = "";
-            frmMasterData.EmployeeID = "";
-            frmMasterData.Course = "";
-        }
-
+ 
     }
 }

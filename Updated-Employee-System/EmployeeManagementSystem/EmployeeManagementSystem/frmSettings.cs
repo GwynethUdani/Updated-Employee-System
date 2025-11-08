@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Text.RegularExpressions;
+using static System.Collections.Specialized.BitVector32;
 
 
 namespace EmployeeManagementSystem
@@ -117,7 +118,19 @@ namespace EmployeeManagementSystem
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
-            CRUD.CRUD.RETRIEVEDTG(dgvUsers, "SELECT * FROM [Users]");   
+            string select_tblrequestorlist = "select * from Users ORDER BY ID DESC";
+            CRUD.CRUD.RETRIEVEDTG(dgvUsers, select_tblrequestorlist);
+
+            CRUD.CRUD.RETRIEVECBO(cmbSection, "SELECT [ID], [Section] FROM [tblSection] ORDER BY [Section] asc", "Section", "ID");
+            CRUD.CRUD.RETRIEVEDTG(dgvUsers, "SELECT * FROM [Users]");
+            cmbSection.SelectedIndex = -1;
+
+            lblMatch.Text = "MATCH";
+            lblMatch.ForeColor = Color.Black;
+            lblNumber.Text = "NUMBER";
+            lblNumber.ForeColor = Color.Black;
+
+
         }
 
         private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -139,6 +152,11 @@ namespace EmployeeManagementSystem
                 "A32", LoginForm.fullname,
                 "A33", DateTime.Now.ToString("yyyy-MM-dd")
             );
+        }
+
+        private void cmbSection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
